@@ -276,4 +276,4 @@ class H(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     if not os.path.exists(DB): seed(); print("Seeded demo data into", DB)
-    port = int(os.environ.get("PORT", 8000)); print(f"http://localhost:{port}"); ThreadingHTTPServer((os.environ.get("HOST", "127.0.0.1"), port), H).serve_forever()
+    port = int(os.environ.get("PORT", 8000)); print(f"http://localhost:{port}"); ThreadingHTTPServer((os.environ.get("HOST", "0.0.0.0"), port), H).serve_forever()
